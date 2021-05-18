@@ -55,7 +55,7 @@ def _calc_times():
     # Get start time and distance
     time = request.args.get('start_time', type=str)
     app.logger.debug("time={}".format(time))
-    #start_time = arrow.get(time, 'YYYY-MM-DDTHH:mm')
+    start_time = arrow.get(time, 'YYYY-MM-DDTHH:mm')
     distance = request.args.get('dist', type=int)
     app.logger.debug(distance)
 

@@ -111,7 +111,8 @@ def close_time(control_dist_km, brevet_dist_km, brevet_start_time):
     time_elapsed = 0
 
     control_dist_km = round(control_dist_km)
-
+    if control_dist_km >= brevet_dist_km:
+        control_dist_km = brevet_dist_km
     # cover France's algorithm
     if control_dist_km <= 60:
         special = 2 / 6
